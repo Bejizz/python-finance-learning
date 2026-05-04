@@ -48,7 +48,7 @@ print("==================================================================")
 
 x = len(income)
 print(x)
-
+# Create a Savings List from Income and Expense.
 Savinglist = [] # empty list store
 for i in range(len(income)):
     Savings = income[i] - expense[i]

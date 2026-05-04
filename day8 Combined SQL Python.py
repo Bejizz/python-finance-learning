@@ -31,6 +31,16 @@ print("==== Query 3 Expenses greater than 3150 ====")
 print(df3)
 
 # Query from Exercise Month, Income, Expenses, Saved income, and Savings_Pct
+
+def Total_Profit(rev, cst):
+    profit = rev - cst 
+    return profit
+income = 2000
+expense = 2600
+
+net_income = Total_Profit(income,expense)
+#print("Net Income",net_income)
+
 df4 = pd.read_sql("""
 SELECT
     Month,
@@ -38,6 +48,7 @@ SELECT
     Expenses,
     Income - Expenses as Saved_Income_£,
     round(100*(Income - Expenses)/Income,3) as Savings_Pct
+    
 FROM Monthly_Finances
 ORDER BY Month
 """, conn)
