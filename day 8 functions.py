@@ -33,3 +33,4 @@ expense = 2600
 
 net_income = Total_Profit(income,expense)
 print("Net Income",net_income)   
+
